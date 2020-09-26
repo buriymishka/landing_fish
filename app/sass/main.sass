@@ -54,7 +54,7 @@ input, textarea
 	text-align: center
 
 .degub-grid
-  +debug(rgba(0, 0, 0, 0.5), 1px solid #ff0)
+	+debug(rgba(0, 0, 0, 0.5), 1px solid #ff0)
 
 b, strong
 	font-weight: bold
@@ -140,7 +140,6 @@ a
 		transition: border .25s ease
 		&:hover
 			border: 2px solid $accent
-
 	&__href
 		display: block
 		line-height: 100px
@@ -151,15 +150,22 @@ a
 		position: relative
 		height: 100%
 		margin: 25px 80px 0
+		+sm(margin, 20px auto 0)
 		.img
 			position: absolute
 			display: block
 			width: 150px
 			height: 150px
 			transform: translate(-50%)
+
+.main-menu
+	.menu__item
+		+sm(display, none)
 .header-main
 	margin-top: 225px
 	position: relative
+	+md(margin-top, 180px)
+	+xs(margin-top, 250px)
 	&__time
 		transform: translateX(-46%) rotate(-90deg)
 		top: 50%
@@ -178,6 +184,8 @@ a
 		font-size: 96px
 		font-family: banny
 		margin: 0
+		padding: 0 55px
+		+xs(font-size, 35px)
 	&__line
 		background-color: $accent
 		display: block
@@ -190,6 +198,7 @@ a
 		display: flex
 		justify-content: center
 		align-items: center
+		+xs(flex-direction, column)
 	&__button
 		border: 1px solid rgba(255, 255, 255, .5)
 		border-radius: 5px
@@ -202,6 +211,13 @@ a
 		transition: all .25s ease
 		font-weight: bold
 		font-size: 14px
+		+xs-block()
+			font-size: 12px
+			font-weight: normal
+			width: 150px
+			height: 40px
+			margin: 10px 0
+
 		&:hover
 			background-color: $accent
 			border: 1px solid $accent
@@ -222,6 +238,11 @@ a
 		line-height: 60px
 		margin: 20px 0
 		transition: all .25s ease
+		+xs-block()
+			font-size: 16px
+			width: 45px
+			height: 45px
+			line-height: 45px
 		&:hover
 			border: 1px solid $accent
 .angle
@@ -262,12 +283,14 @@ a
 		padding-bottom: 50px
 	&__wrapper
 		color: #000000
-		display: flex
-		margin: auto
 		padding: 60px 0
+		margin-right: auto
+		margin-left: auto
+		+row-flex()
 	&__text
 		+col()
 		+size(6)
+		+size-xs(12)
 		display: flex
 		justify-content: center
 		align-items: center
@@ -276,8 +299,10 @@ a
 		font-family: "banny"
 		font-size: 36px
 		text-transform: uppercase
+		text-align: center
 	&__sub-title
 		font-size: 18px
+		
 		font-weight: bold
 		text-align: center
 	&__description
@@ -286,11 +311,12 @@ a
 	&__picture
 		+col()
 		+size(5.6)
+		+size-xs(12)
 		position: relative
 		margin: auto
 	&__decorative-square
 		top: 50%
-		transform: translate(26%, -50%)
+		transform: translate(18%, -50%)
 		right: 0
 
 .section-with-title
@@ -306,10 +332,12 @@ a
 		&__picture
 			+col()
 			+size(5.6)
-			+shift(0.38)
+			+shift-left(0.38)
+			+size-xs(12)
 
 .form
 	+row-flex()
+	// align-items: space-between
 	&__item
 		+col()
 		+size(6)
@@ -335,6 +363,7 @@ a
 			text-align: center
 		&__sub-title
 			max-width: 40%
+			+md(max-width, 90%)
 			margin: 10px auto
 		&__tabs-result
 			+row-flex()
@@ -342,6 +371,8 @@ a
 			.result-item
 				+col()
 				+size(4)
+				+size-md(6)
+				+size-xs(12)
 				margin-bottom: 30px
 				padding: 0 30px
 				&__title
@@ -393,8 +424,12 @@ a
 		&__item
 			+u-col(0px)
 			+u-size(3, 12, 0px)
+			+md(width, 50%)
+			+xs(width, 100%)
+			height: auto
 			img
 				width: 100%
+				display: block
 
 .eighth-section
 	.section
@@ -404,6 +439,7 @@ a
 			text-align: center
 		&__sub-title
 			max-width: 40%
+			+md(max-width, 90%)
 			margin: 10px auto
 	.form
 		margin: auto !important
@@ -440,7 +476,91 @@ a
 		margin: 0
 		padding: 50px 0
 	
+.menu-mobile
+	position: fixed
+	top: 0
+	left: 0
+	height: 100vh
+	width: 50%
+	+xs(width, 100%)
+	display: flex
+	justify-content: center
+	background-color: #000
+	overflow-y: auto
+	z-index: 5
+	transform: translateX(-100%)
+	transition: transform .25s ease
+	&.active
+		transform: translateX(0%)
+	.navigation
+		display: flex
+		align-items: center
+		width: 100%
+	ul
+		display: block
+		width: 100%
+		a
+			color: #ffffff
+			font-size: 20px
+			line-height: 60px
+
+.menu-btn
+	position: fixed
+	width: 40px
+	height: 50px
+	background-color: $accent
+	top: 0
+	left: 0
+	z-index: 6
+	transition: left .25s ease
+	padding: 0 5px
+	&.active
+		left: 50%
+		+xs(left, 80%)
 			
+.toggle-mnu 
+	display: none
+	align-items: center
+	justify-content: center
+	margin-top: 10px
+	margin-left: 10px
+	border-radius: 5px
+	+sm(display, flex)
+	span:after, span:before 
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+		width: 100%
+
+	span:after
+		top: 18px
+
+	span 
+		position: relative
+		top: -8px
+		display: block
+
+	span, span:after, span:before
+		width: 70%
+		height: 2px
+		background-color: #fff
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+	
+	span:after, span:before
+		width: 100%
+
+
+	&.on span 
+		background-color: transparent
+
+	&.on span:before 
+		transform: rotate(45deg) translate(-1px, 0px)
+
+	&.on span:after 
+		transform: rotate(-45deg) translate(6px, -7px)			
 			
 
 @import "media" // Always at the end
