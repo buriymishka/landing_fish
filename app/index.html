@@ -54,7 +54,7 @@
 		</div>
 	</div>
 
-	<header class="header" style="background-image: url(img/header-bg.jpg);">
+	<header class="header" id="home" style="background-image: url(img/header-bg.jpg);">
 		<div class="wrapper header-wrapper">
 			<span class="decorative-line line1"></span>
 			<span class="decorative-line line2"></span>
@@ -62,17 +62,17 @@
 			<span class="decorative-line line4"></span>
 			<nav>
 				<ul class="menu main-menu">
-					<li class="menu__item"><a class="menu__href" href="#">Home</a></li>
-					<li class="menu__item"><a class="menu__href" href="#">About</a></li>
-					<li class="menu__item"><a class="menu__href" href="#">Team</a></li>
-					<li class="menu__item"><a class="menu__href" href="#">Booking</a></li>
+					<li class="menu__item"><a class="menu__href" href="#home">Home</a></li>
+					<li class="menu__item"><a class="menu__href" href="#about">About</a></li>
+					<li class="menu__item"><a class="menu__href" href="#team">Team</a></li>
+					<li class="menu__item"><a class="menu__href" href="#booking">Booking</a></li>
 					<li class="menu__wheel">
 						<div class="img"><img src="img/wheel.svg" alt="wheel"></div>
 					</li>
-					<li class="menu__item"><a class="menu__href" href="#">Menu</a></li>
-					<li class="menu__item"><a class="menu__href" href="#">Galerie</a></li>
-					<li class="menu__item"><a class="menu__href" href="#">Events</a></li>
-					<li class="menu__item"><a class="menu__href" href="#">Contact</a></li>
+					<li class="menu__item"><a class="menu__href" href="#menu">Menu</a></li>
+					<li class="menu__item"><a class="menu__href" href="#galerie">Galerie</a></li>
+					<li class="menu__item"><a class="menu__href" href="#events">Events</a></li>
+					<li class="menu__item"><a class="menu__href" href="#contact">Contact</a></li>
 				</ul>
 			</nav>
 			<div class="header-main">
@@ -93,13 +93,13 @@
 				</div>
 			</div>
 			<div class="angle">
-				<a href="#" class="angle__item"><i class="fab fa-angle-down"></i></a>
+				<a href="#about" class="angle__item"><i class="fab fa-angle-down"></i></a>
 			</div>
 		</div>
 
 	</header>
 
-	<section class="first-section section">
+	<section class="first-section section" id="about">
 		<div class="wrapper">
 			<div class="section__wrapper">
 				<div class="section__text">
@@ -119,7 +119,8 @@
 		</div>
 	</section>
 
-	<section class="second-section section bg-img section-with-title" style="background-image: url(img/second-bg.jpg);">
+	<section class="second-section section bg-img section-with-title" id="team"
+		style="background-image: url(img/second-bg.jpg);">
 		<h2 class="section__main-title">Our team</h2>
 		<div class="wrapper">
 			<div class="section__wrapper">
@@ -140,7 +141,7 @@
 		</div>
 	</section>
 
-	<section class="third-section section">
+	<section class="third-section section" id="booking">
 		<div class="wrapper">
 			<div class="section__wrapper">
 				<div class="section__text">
@@ -165,7 +166,7 @@
 	</section>
 
 	<section class="fourth-section section bg-img section-with-title" style="background-image: url(img/fourth-bg.jpg);">
-		<h2 class="section__main-title">Our team</h2>
+		<h2 class="section__main-title">Specialties</h2>
 		<div class="wrapper">
 			<div class="section__wrapper">
 				<div class="section__picture">
@@ -185,7 +186,7 @@
 		</div>
 	</section>
 
-	<section class="fifth-section section">
+	<section class="fifth-section section" id="menu">
 		<div class="wrapper">
 			<div class="section__wrapper">
 				<h2 class="section__title">Delicious menu</h2>
@@ -194,88 +195,130 @@
 					molestie est a, tempor magna.</p>
 				<div class="section__tabs">
 					<ul class="section__tabs-list tabs-list">
-						<li class="tabs-list__item">Soupe</li>
-						<li class="tabs-list__item">Pizza</li>
-						<li class="tabs-list__item">Pasta</li>
-						<li class="tabs-list__item">Desert</li>
-						<li class="tabs-list__item">Wine</li>
-						<li class="tabs-list__item">Beer</li>
-						<li class="tabs-list__item">Drinks</li>
+						<li class="tabs-list__item" data-s="Soupe">Soupe</li>
+						<li class="tabs-list__item" data-s="Pizza">Pizza</li>
+						<li class="tabs-list__item" data-s="Pasta">Pasta</li>
+						<li class="tabs-list__item" data-s="Desert">Desert</li>
+						<li class="tabs-list__item" data-s="Wine">Wine</li>
+						<li class="tabs-list__item" data-s="Beer">Beer</li>
+						<li class="tabs-list__item" data-s="Drinks">Drinks</li>
 					</ul>
 				</div>
-				<div class="section__tabs-result">
+				<div class="section__tabs-result active" data-r="Soupe">
 					<div class="tabs-result__item result-item">
-						<h5 class="result-item__title">Super pizza with salami</h5>
+						<h5 class="result-item__title">Super pizza with salami1</h5>
 						<p class="result-item__price">55,68$</p>
 						<p class="result-item__descpirtion">Integer ullamcorper neque eu purus euismod</p>
 					</div>
 					<div class="tabs-result__item result-item">
-						<h5 class="result-item__title">Super pizza with salami</h5>
+						<h5 class="result-item__title">Super pizza with salami1</h5>
 						<p class="result-item__price">55,68$</p>
 						<p class="result-item__descpirtion">Integer ullamcorper neque eu purus euismod</p>
 					</div>
 					<div class="tabs-result__item result-item">
-						<h5 class="result-item__title">Super pizza with salami</h5>
+						<h5 class="result-item__title">Super pizza with salami1</h5>
+						<p class="result-item__price">55,68$</p>
+						<p class="result-item__descpirtion">Integer ullamcorper neque eu purus euismod</p>
+					</div>
+				</div>
+				<div class="section__tabs-result" data-r="Pizza">
+					<div class="tabs-result__item result-item">
+						<h5 class="result-item__title">Super pizza with salami2</h5>
 						<p class="result-item__price">55,68$</p>
 						<p class="result-item__descpirtion">Integer ullamcorper neque eu purus euismod</p>
 					</div>
 					<div class="tabs-result__item result-item">
-						<h5 class="result-item__title">Super pizza with salami</h5>
+						<h5 class="result-item__title">Super pizza with salami2</h5>
 						<p class="result-item__price">55,68$</p>
 						<p class="result-item__descpirtion">Integer ullamcorper neque eu purus euismod</p>
 					</div>
 					<div class="tabs-result__item result-item">
-						<h5 class="result-item__title">Super pizza with salami</h5>
+						<h5 class="result-item__title">Super pizza with salami2</h5>
+						<p class="result-item__price">55,68$</p>
+						<p class="result-item__descpirtion">Integer ullamcorper neque eu purus euismod</p>
+					</div>
+				</div>
+				<div class="section__tabs-result" data-r="Pasta">
+					<div class="tabs-result__item result-item">
+						<h5 class="result-item__title">Super pizza with salami3</h5>
 						<p class="result-item__price">55,68$</p>
 						<p class="result-item__descpirtion">Integer ullamcorper neque eu purus euismod</p>
 					</div>
 					<div class="tabs-result__item result-item">
-						<h5 class="result-item__title">Super pizza with salami</h5>
+						<h5 class="result-item__title">Super pizza with salami3</h5>
 						<p class="result-item__price">55,68$</p>
 						<p class="result-item__descpirtion">Integer ullamcorper neque eu purus euismod</p>
 					</div>
 					<div class="tabs-result__item result-item">
-						<h5 class="result-item__title">Super pizza with salami</h5>
+						<h5 class="result-item__title">Super pizza with salami3</h5>
+						<p class="result-item__price">55,68$</p>
+						<p class="result-item__descpirtion">Integer ullamcorper neque eu purus euismod</p>
+					</div>
+				</div>
+				<div class="section__tabs-result" data-r="Desert">
+					<div class="tabs-result__item result-item">
+						<h5 class="result-item__title">Super pizza with salami4</h5>
 						<p class="result-item__price">55,68$</p>
 						<p class="result-item__descpirtion">Integer ullamcorper neque eu purus euismod</p>
 					</div>
 					<div class="tabs-result__item result-item">
-						<h5 class="result-item__title">Super pizza with salami</h5>
+						<h5 class="result-item__title">Super pizza with salami4</h5>
 						<p class="result-item__price">55,68$</p>
 						<p class="result-item__descpirtion">Integer ullamcorper neque eu purus euismod</p>
 					</div>
 					<div class="tabs-result__item result-item">
-						<h5 class="result-item__title">Super pizza with salami</h5>
+						<h5 class="result-item__title">Super pizza with salami4</h5>
+						<p class="result-item__price">55,68$</p>
+						<p class="result-item__descpirtion">Integer ullamcorper neque eu purus euismod</p>
+					</div>
+				</div>
+				<div class="section__tabs-result" data-r="Wine">
+					<div class="tabs-result__item result-item">
+						<h5 class="result-item__title">Super pizza with salami5</h5>
 						<p class="result-item__price">55,68$</p>
 						<p class="result-item__descpirtion">Integer ullamcorper neque eu purus euismod</p>
 					</div>
 					<div class="tabs-result__item result-item">
-						<h5 class="result-item__title">Super pizza with salami</h5>
+						<h5 class="result-item__title">Super pizza with salami5</h5>
 						<p class="result-item__price">55,68$</p>
 						<p class="result-item__descpirtion">Integer ullamcorper neque eu purus euismod</p>
 					</div>
 					<div class="tabs-result__item result-item">
-						<h5 class="result-item__title">Super pizza with salami</h5>
+						<h5 class="result-item__title">Super pizza with salami5</h5>
+						<p class="result-item__price">55,68$</p>
+						<p class="result-item__descpirtion">Integer ullamcorper neque eu purus euismod</p>
+					</div>
+				</div>
+				<div class="section__tabs-result" data-r="Beer">
+					<div class="tabs-result__item result-item">
+						<h5 class="result-item__title">Super pizza with salami6</h5>
 						<p class="result-item__price">55,68$</p>
 						<p class="result-item__descpirtion">Integer ullamcorper neque eu purus euismod</p>
 					</div>
 					<div class="tabs-result__item result-item">
-						<h5 class="result-item__title">Super pizza with salami</h5>
+						<h5 class="result-item__title">Super pizza with salami6</h5>
 						<p class="result-item__price">55,68$</p>
 						<p class="result-item__descpirtion">Integer ullamcorper neque eu purus euismod</p>
 					</div>
 					<div class="tabs-result__item result-item">
-						<h5 class="result-item__title">Super pizza with salami</h5>
+						<h5 class="result-item__title">Super pizza with salami6</h5>
+						<p class="result-item__price">55,68$</p>
+						<p class="result-item__descpirtion">Integer ullamcorper neque eu purus euismod</p>
+					</div>
+				</div>
+				<div class="section__tabs-result" data-r="Drinks">
+					<div class="tabs-result__item result-item">
+						<h5 class="result-item__title">Super pizza with salami7</h5>
 						<p class="result-item__price">55,68$</p>
 						<p class="result-item__descpirtion">Integer ullamcorper neque eu purus euismod</p>
 					</div>
 					<div class="tabs-result__item result-item">
-						<h5 class="result-item__title">Super pizza with salami</h5>
+						<h5 class="result-item__title">Super pizza with salami7</h5>
 						<p class="result-item__price">55,68$</p>
 						<p class="result-item__descpirtion">Integer ullamcorper neque eu purus euismod</p>
 					</div>
 					<div class="tabs-result__item result-item">
-						<h5 class="result-item__title">Super pizza with salami</h5>
+						<h5 class="result-item__title">Super pizza with salami7</h5>
 						<p class="result-item__price">55,68$</p>
 						<p class="result-item__descpirtion">Integer ullamcorper neque eu purus euismod</p>
 					</div>
@@ -284,7 +327,7 @@
 		</div>
 	</section>
 
-	<section class="sixth-section section bg-img" style="background-image: url(img/sixth-bg.jpg);">
+	<section class="sixth-section section bg-img" id="events" style="background-image: url(img/sixth-bg.jpg);">
 		<h2 class="section__main-title">PRIVATE EVENTS</h2>
 		<div class="wrapper">
 			<div class="section__wrapper">
@@ -302,7 +345,7 @@
 		</div>
 	</section>
 
-	<section class="seventh-section section">
+	<section class="seventh-section section" id="galerie">
 		<div class="section-list">
 			<div class="section-list__item"><img src="img/seventh-1.png" alt="food"></div>
 			<div class="section-list__item"><img src="img/seventh-2.png" alt="food"></div>
@@ -311,7 +354,7 @@
 		</div>
 	</section>
 
-	<section class="eighth-section section">
+	<section class="eighth-section section" id="contact">
 		<div class="wrapper">
 			<div class="section__wrapper">
 				<h2 class="section__title">Contact</h2>

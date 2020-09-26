@@ -268,6 +268,7 @@ a
 
 .section
 	overflow-x: hidden
+	margin: 100px 0
 	&__main-title
 		text-align: center
 		font-size: 12px
@@ -283,7 +284,7 @@ a
 		padding-bottom: 50px
 	&__wrapper
 		color: #000000
-		padding: 60px 0
+		padding: 0 0 60px
 		margin-right: auto
 		margin-left: auto
 		+row-flex()
@@ -367,6 +368,9 @@ a
 			margin: 10px auto
 		&__tabs-result
 			+row-flex()
+			display: none
+			&.active
+				display: flex
 			margin: 0
 			.result-item
 				+col()
@@ -419,6 +423,7 @@ a
 
 
 .seventh-section
+	margin-top: -100px
 	.section-list
 		+u-row-flex(0px)
 		&__item
